@@ -1,0 +1,13 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><meta name="robots" content="noindex">
+<meta name="referrer" content="no-referrer"><title>Tesla sign-in complete</title>
+<style>body{font-family:system-ui,sans-serif;max-width:40rem;margin:3rem auto;padding:0 1rem}code{word-break:break-all;background:#eee;padding:.4rem;display:block}</style></head>
+<body><h1>Tesla sign-in complete</h1>
+<p>Copy the code below and paste it back to Tesla Bot within a few minutes (it is single-use and expires quickly). It is useless without the app's client secret.</p>
+<code id="c">(no code in URL)</code><p id="s"></p>
+<script>
+var p=new URLSearchParams(location.search);
+if(p.get('code')){document.getElementById('c').textContent=p.get('code');}
+if(p.get('error')){document.getElementById('s').textContent='Error: '+p.get('error')+' '+(p.get('error_description')||'');}
+history.replaceState(null,'',location.pathname);
+</script></body></html>
